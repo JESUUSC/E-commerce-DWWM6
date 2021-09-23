@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContenuPanier{% endblock %}
+
+{% block body %}
+    <h1>ContenuPanier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contenu_panier.id }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ contenu_panier.Quantite }}</td>
+            </tr>
+            <tr>
+                <th>Date_ajout</th>
+                <td>{{ contenu_panier.DateAjout ? contenu_panier.DateAjout|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('contenu_panier_index') }}">back to list</a>
+
+    <a href="{{ path('contenu_panier_edit', {'id': contenu_panier.id}) }}">edit</a>
+
+    {{ include('contenu_panier/_delete_form.html.twig') }}
+{% endblock %}
