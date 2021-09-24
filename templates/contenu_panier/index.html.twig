@@ -21,8 +21,8 @@
                 <td>{{ contenu_panier.Quantite }}</td>
                 <td>{{ contenu_panier.DateAjout ? contenu_panier.DateAjout|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('contenu_panier_show', {'id': contenu_panier.id}) }}">show</a>
-                    <a href="{{ path('contenu_panier_edit', {'id': contenu_panier.id}) }}">edit</a>
+                    <a href="{{ path('contenu_panier_show', {'id': contenu_panier.id}) }}">Voir</a>
+                    <a href="{{ path('contenu_panier_edit', {'id': contenu_panier.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
