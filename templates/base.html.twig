@@ -17,9 +17,11 @@
     
     <body>
     <header>
-        <nav><a href={{path('contenu_panier_index')}}>Produits</a></nav>
-        <nav><a href={{path('panier_index')}}>Panier</a></nav>
-        <nav><a href={{path('user_index')}}>Connexion</a></nav>
+        <nav>
+            <a href={{path('produit_index')}}>Produits</a>
+            <a href={{path('panier_index')}}>Panier</a>
+            <a href={{path('user_index')}}>Connexion</a>
+        </nav>
     </header>
         {% block body %}{% endblock %}
     </body>
