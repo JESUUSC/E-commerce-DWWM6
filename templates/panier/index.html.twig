@@ -21,8 +21,8 @@
                 <td>{{ panier.dateAchat ? panier.dateAchat|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ panier.etat ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('panier_show', {'id': panier.id}) }}">show</a>
-                    <a href="{{ path('panier_edit', {'id': panier.id}) }}">edit</a>
+                    <a href="{{ path('panier_show', {'id': panier.id}) }}">Voir</a>
+                    <a href="{{ path('panier_edit', {'id': panier.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('panier_new') }}">Create new</a>
+    <a href="{{ path('panier_new') }}">Nouveau</a>
 {% endblock %}
