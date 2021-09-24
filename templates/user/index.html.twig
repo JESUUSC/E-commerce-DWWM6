@@ -3,12 +3,13 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
-    <h1>User</h1>
+    <h1>Utilisateurs</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                
+                <th>id</th>
                 <th>Email</th>
                 <th>Roles</th>
                 <th>Password</th>
@@ -19,6 +20,7 @@
         <tbody>
         {% for user in users %}
             <tr>
+                
                 <td>{{ user.id }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>

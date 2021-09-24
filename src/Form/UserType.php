@@ -20,17 +20,17 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class,[
-                'label' => 'label.email',
+                'label' => 'Email',
             ])
             ->add('username', TextType::class, [
-                'label' => 'label.username',
+                'label' => 'Nom d\'utilisateur',
             ])
-            ->add('roles')
+            // ->add('roles')
             ->add('password', PasswordType::class, [
-                'label' => 'label.password',
+                'label' => 'Mot de passe',
             ])
-            ->add('isVerified', BooleanType::class)
-            ->add('paniers')
+            // ->add('isVerified')
+            // ->add('paniers')
         ;
     }
 
