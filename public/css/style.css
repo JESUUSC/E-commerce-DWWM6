@@ -13,6 +13,8 @@ h1{
     background: -webkit-linear-gradient(-25deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin: 5px 0;
 }
 nav{
     text-transform: uppercase;
