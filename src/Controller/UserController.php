@@ -24,6 +24,7 @@ class UserController extends AbstractController
     #[Route('/new', name: 'user_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {
+
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -53,11 +54,17 @@ class UserController extends AbstractController
     #[Route('/{id}/edit', name: 'user_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, User $user): Response
     {
+        //ajout de la variable user
+        $user = $this->getUser();
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+
+            //ajouter un message
+            $this->addFlash('success', 'user.updated_successfully');
 
             return $this->redirectToRoute('user_index', [], Response::HTTP_SEE_OTHER);
         }
